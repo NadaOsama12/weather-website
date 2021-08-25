@@ -9,7 +9,7 @@ if(erorr){
  }else if(body.erorr){
   callback('unable to find location',undefined)
  }else{
-  callback(undefined,"it is currently "+ body.current.temperature +" degress out. It feels like "+ body.current.feelslike+" degress out")
+  callback(undefined,"it is currently "+ body.current.temperature +" degress out. It feels like "+ body.current.feelslike+" degress out. and the humidty is "+ body.current.humidity)
  }
 }
 )}
