@@ -5,7 +5,7 @@ const { send } = require('process')
 const geocode = require('./utils/geocode')
 const forcast = require('./utils/forcast')
 const app = express()
-
+const port = process.env.PORT || 3000
 //define paths for express config
 const dircPath = path.join(__dirname,'../puplic')
 const viewPath = path.join(__dirname, '../templates/views' )
@@ -103,6 +103,6 @@ app.get('*', (req,res)=>{
   errorMsg:'page not found'
  })
 })
-app.listen(3000,()=>{
- console.log('server is up on port 3000')
+app.listen(port,()=>{
+ console.log('server is up on port '+ port)
 })
